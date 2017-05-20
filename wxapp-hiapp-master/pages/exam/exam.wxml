@@ -1,9 +1,25 @@
 <view class="container">
 <view class="page-header"></view>
-<view class="page">
+<view class="page1">
    <view class="section__ctn">
-        <image class="top-image" mode="aspectFill" src="../../assets/game_bg.png"></image>
+        <image class="top-image" mode="scaleToFill" src="../../assets/exam.png"></image>
     </view>   
 </view>
+
+<view class="nav">
+
+    <block wx:for-items="{{navs}}" wx:key="item.id"> 
+    <view class="boxView" data-type="{{item.text}}" data-route="{{item.datasource}}" bindtouchend="navToPage"> 
+      <image src="{{item.image}}"/>
+      <text>{{item.text}}</text>
+    </view>
+    </block>
+
+ </view>
+
+
+
+
+<view class="page-footer"></view>
  
 </view>

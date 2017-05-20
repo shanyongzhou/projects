@@ -1,24 +1,46 @@
-.user-avatar {
-  width: 130rpx;
-  height: 130rpx;
-  border: 1rpx solid #d9d9d9;
-  border-radius: 10rpx;
-  background-color: #c8c8c8;
+.top-image{
+    width: 100%;
+    height: 200px;
+    background-color: #eeeeee;
 }
 
-.user-info{
+.section__ctn{
+    margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+.nav{
+
+  width:100%;
+  height: 70px;
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  font-size: 34rpx;
-  margin-left: 30rpx;
+  flex-direction: row;
+  background: white;
 }
 
-.user-info-text{
-  margin: 10rpx 0;
+/*格子*/
+.boxView{
+
+display: flex;
+flex: 1;
+flex-direction:column;
+ align-items: center;
+  border-right:1px solid rgb(245, 245, 245); 
+}
+/*格子图片*/
+.boxView image{
+  margin-top: 7px;
+  width: 36px;
+  height: 36px;
+ 
 }
 
-.user-info-uid{
-  font-size: 28rpx;
-  color: #808080;
+/*格子文字*/
+.boxView text{
+
+  font-size: 12px;
+  margin-top: 7px; 
 }

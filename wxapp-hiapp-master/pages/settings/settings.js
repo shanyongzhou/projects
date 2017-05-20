@@ -1,12 +1,21 @@
 let app = getApp()
+
 Page({
   data:{
+    abouthidden:"",
     userInfo: {}
   },
+  onReady(){
+    this.setData({
+      abouthidden: "none"
+    })
+  },
+
+
   onLoad() {
     app.getUserInfo(userInfo => {
       this.setData({
-        userInfo: userInfo
+        userInfo: userInfo,
       })
     })
   },

@@ -7,7 +7,8 @@
     "pages/feedback/feedback",
     "pages/profile/profile",
     "pages/message/message",
-    "pages/exam/exam"
+    "pages/exam/exam",
+    "pages/exam/history/history"
   ],
   "window":{
     "backgroundTextStyle": "light",
