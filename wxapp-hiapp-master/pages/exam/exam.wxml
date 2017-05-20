@@ -1,0 +1,9 @@
+<view class="container">
+<view class="page-header"></view>
+<view class="page">
+   <view class="section__ctn">
+        <image class="top-image" mode="aspectFill" src="../../assets/game_bg.png"></image>
+    </view>   
+</view>
+ 
+</view>
