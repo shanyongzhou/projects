@@ -13,7 +13,7 @@ Page({
       {
         image: '../../assets/home_play.png',
         text: '去考试',
-        datasource: "../feedback/feedback" 
+        datasource: "todo/todo" 
       },
       {
         image: '../../assets/home_door.png',

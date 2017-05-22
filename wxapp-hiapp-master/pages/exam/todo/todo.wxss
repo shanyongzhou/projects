@@ -1,0 +1,48 @@
+.checkbox{
+  display: block;
+  margin-bottom: 20rpx;
+}
+.radio {
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.page__title{
+    display: inline-block;
+    padding: 20rpx 40rpx;
+    font-size: 32rpx;
+    color: #AAAAAA;
+    border-bottom: 1px solid #CCCCCC;
+}
+.page__desc{
+    display: block;
+    margin-top: 20rpx;
+    font-size: 36rpx;
+   
+}
+.section{
+    margin-bottom: 80rpx;
+}
+.section_gap{
+    padding: 0 30rpx;
+}
+.section__title{
+    margin-bottom: 16rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.section_gap .section__title{
+    padding-left: 0;
+    padding-right: 0;
+}
+.page__hd{
+  margin-top: 40rpx;
+}
+.rightAnswer{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #FF0000
+}
+.button-wrapper{
+  bottom: 0
+}

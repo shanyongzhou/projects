@@ -1,0 +1,46 @@
+<view class="page" bindtouchstart="tap_start" bindtouchmove="tap_drag" bindtouchend="tap_end">
+  <view class="page__hd">
+    <text class="page__title">{{type}}</text>
+    <text class="page__desc">{{desc}}</text>
+  </view>
+  <view class="page__hd">
+    <view class="section section_gap" style="display:{{checkboxShow}}">
+      <checkbox-group bindchange="checkboxchange">
+        <label class="radio" wx:for="{{items}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="section section_gap" style="display:{{radioShow}}">
+      <radio-group bindchange="radiochange">
+        <label class="{{checkOrRadio}}" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
+
+  </view>
+
+
+  <view class="page__bd">
+    <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">
+      <view>{{modalText}}</view>
+
+    </modal>
+
+    <modal title="标题" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden2}}" mask bindconfirm="confirm" bindcancel="cancel">
+      <view>{{submitText}}</view>
+    </modal>
+  </view>
+
+  <view class="rightAnswer" hidden="{{rightAnswerHidden}}">
+    正确答案:{{rightAnser}}</view>
+
+<view class="button-wrapper">
+        <button type="primary" 
+          disabled="{{disabled}}" bindtap="submit"> 提交
+        </button>
+</view>
+
+</view>

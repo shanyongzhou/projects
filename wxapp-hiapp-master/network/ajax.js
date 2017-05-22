@@ -1,4 +1,3 @@
-let API_PATH = 'https://raw.githubusercontent.com/BelinChung/HiApp/master/src/api/'
 
 function _param(obj = {}) {
     let _ = encodeURIComponent
@@ -6,7 +5,7 @@ function _param(obj = {}) {
 }
 
 function ajax({url, query, data, success, fail, complete, method = 'GET'}) {
-  url = API_PATH + url + '?' + _param(query)
+  url = url 
 
   wx.request({
     url: url,
