@@ -1,23 +1,16 @@
-<view class="container">
-<view class="page"> 
-  <view class="page-bottom"> 
-    <view class="page-content"> 
-      <view class="wc"> 
-        <text>第一个item1</text> 
-      </view> 
-      <view class="wc"> 
-        <text>第二个item2</text> 
-      </view> 
-      <view class="wc"> 
-        <text>第三个item3</text> 
-      </view> 
-      <view class="wc"> 
-        <text>第四个item4</text> 
-      </view> 
-    </view> 
-  </view> 
-  <view class="page-top {{open ? 'c-state1' : ''}}"> 
-    <image bindtap="tap_ch" src="../../images/btn.png"></image> 
-  </view> 
-</view> 
+<view class="bgView">
+  <block wx:for="{{items}}" wx:key="*this">
+   <navigator  class="cell" style="background-color:{{item.color}}"> 
+
+    <image class="aspectFill" src="{{item.image}}"></image>
+
+    <view class="titlecen">
+    <text class="Celltitle">{{item.title}}</text>
+    <text class="Celltitle1">分数:{{item.subTitle}},耗时:{{item.Fraction}}分钟</text>
+    </view>
+
+   
+
+    </navigator>
+  </block>
 </view>

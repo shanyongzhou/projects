@@ -1,8 +1,43 @@
-.c-state1{ 
- transform: rotate(0deg) scale(1) translate(75%,0%);  
- -webkit-transform: rotate(0deg) scale(1) translate(75%,0%);  
-} 
 
-.container {
-  background-color: #ffffff;
+.bgView{
+background-color: "#F3F3F3";
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
+/*整块*/
+.cell{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius:10rpx;
+  /*vertical-align: middle;*/
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+/*title*/
+.Celltitle{
+    color: #B22222;
+    font-size: 24px;
+}
+/*子标题*/
+.Celltitle1{
+    color: #8B4513;
+    font-size: 16px;
+}
+/*图片*/
+.aspectFill{
+  height: 100rpx;
+  width: 100rpx;
+  padding: 30rpx;
+}
+/*标题view*/
+.titlecen
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+

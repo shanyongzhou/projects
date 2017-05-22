@@ -10,7 +10,7 @@
     "pages/exam/exam",
     "pages/exam/history/history",
     "pages/exam/todo/todo",
-    "pages/exam/search/search"
+    "pages/exam/sort/sort"
   ],
   "window": {
     "backgroundTextStyle": "light",

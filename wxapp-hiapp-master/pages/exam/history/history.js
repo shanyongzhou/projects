@@ -1,4 +1,6 @@
 // history.js
+let app = getApp()
+let data = require('historyData.js')
 Page({
 
   /**
@@ -12,7 +14,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var newData = data.mtData();
+    var finaData = [];
+    for(var i=0;i<newData.length;i++){
+      finaData.push({
+        color: newData[i].Fraction >= 60 ? '#90EE90' :'#FFA54F',
+        image: newData[i].Fraction >= 60 ? '../../../assets/airline.png' : '../../../assets/airline.png',
+        title: newData[i].date,
+        subTitle: newData[i].Fraction,
+        Fraction: newData[i].consuming
+      })
+    }
+    this.setData({
+      items:finaData
+    })
   },
 
   /**
