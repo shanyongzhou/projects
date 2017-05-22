@@ -10,7 +10,7 @@
     "pages/exam/exam",
     "pages/exam/history/history",
     "pages/exam/todo/todo",
-    "pages/exam/todo/todo"
+    "pages/exam/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -49,7 +49,7 @@
         "selectedIconPath": "assets/settings-selected.png"
       },
       {
-        "pagePath": "pages/settings/settings",
+        "pagePath": "pages/exam/todo/todo",
         "text": "通用查询",
         "iconPath": "assets/settings-outline.png",
         "selectedIconPath": "assets/settings-selected.png"
