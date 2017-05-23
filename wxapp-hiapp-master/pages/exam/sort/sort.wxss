@@ -1,1 +1,5 @@
 /* sort.wxss */
+.picker{
+  padding: 26rpx;
+  background-color: #FFFFFF;
+}

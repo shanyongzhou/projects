@@ -49,7 +49,7 @@
         "selectedIconPath": "assets/settings-selected.png"
       },
       {
-        "pagePath": "pages/exam/todo/todo",
+        "pagePath": "pages/settings/settings",
         "text": "通用查询",
         "iconPath": "assets/settings-outline.png",
         "selectedIconPath": "assets/settings-selected.png"

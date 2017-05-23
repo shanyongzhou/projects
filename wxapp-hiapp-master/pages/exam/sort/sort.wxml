@@ -1,2 +1,26 @@
-<!--sort.wxml-->
-<text>sort.wxml</text>
+<view class="page">
+  <view class="page__bd">
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          排序条件：{{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <picker mode="date" value="{{startDate}}"  bindchange="bindDateChange">
+        <view class="picker">
+          开始日期: {{time}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <picker mode="date" value="{{endDate}}"  bindchange="bindDateChange">
+        <view class="picker">
+          结束日期: {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>

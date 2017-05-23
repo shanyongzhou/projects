@@ -18,7 +18,7 @@ Page({
       {
         image: '../../assets/home_door.png',
         text: '排名',
-        datasource: "../feedback/feedback" 
+        datasource: "sort/sort" 
       }
     ]},
   onLoad() {
