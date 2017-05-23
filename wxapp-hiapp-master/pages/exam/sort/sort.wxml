@@ -8,19 +8,58 @@
       </picker>
     </view>
     <view class="section">
-      <picker mode="date" value="{{startDate}}"  bindchange="bindDateChange">
+      <picker mode="date" value="{{startDate}}" bindchange="bindStartDateChange">
         <view class="picker">
-          开始日期: {{time}}
+          开始日期: {{startDate}}
         </view>
       </picker>
     </view>
 
     <view class="section">
-      <picker mode="date" value="{{endDate}}"  bindchange="bindDateChange">
+      <picker mode="date" value="{{endDate}}" bindchange="bindEndDateChange">
         <view class="picker">
-          结束日期: {{date}}
+          结束日期: {{endDate}}
         </view>
       </picker>
     </view>
   </view>
+ <view class="page__bd">
+  <view class="order-list">
+
+    <!--购物车商品列表-->
+    <view wx:for="{{sorts}}">
+      <view class="orderList" data-item-index="{{index}}" bindtap="onItemClick">
+        <view class="first-line">
+          <text>第{{item.sort}}名</text>
+           <text class="name">{{item.name}}</text>
+          
+        </view>
+        <view>
+          <text class="text-left">考试次数</text>
+          <text>{{item.count}}</text>
+        </view>
+        <view>
+         <text class="text-left">分数</text>
+          <text>最高分数:{{item.max}},平均分数:{{item.avg}}</text>
+        </view>
+        <view>
+         <text class="text-left">耗时</text>
+          <text>总耗时:{{item.totalConsuming}},平均耗时:{{item.avgConsuming}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+
+
+  </view>
+
+
+
+
+
+
+
+
+
+
 </view>

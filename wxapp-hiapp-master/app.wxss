@@ -89,13 +89,13 @@ view, scroll-view, input, text{
   width: initial;
 }
 .section{
-    margin-bottom: 80rpx;
+    margin-bottom: 15rpx;
 }
 .section_gap{
     padding: 0 30rpx;
 }
 .section__title{
-    margin-bottom: 16rpx;
+    margin-bottom: 5rpx;
     padding-left: 30rpx;
     padding-right: 30rpx;
 }

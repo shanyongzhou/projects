@@ -1,4 +1,5 @@
 // sort.js
+let data = require('sortData.js')
 Page({
 
   /**
@@ -13,20 +14,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var  date = new Date();
-    var endDate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
-    date = date.setMonth(date.getMonth-1);
-    var startDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-    this.setDate({
-      startDate:startDate,
-      endDate:endDate
-    })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    var date = new Date();
+    var endDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    date.setMonth(date.getMonth() - 1);
+    var startDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    var da = data.mtData()
+    this.setData({
+      startDate: startDate,
+      endDate: endDate,
+      sorts:data.mtData()
+    })
 
   },
 
@@ -70,5 +74,29 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindEndDateChange:function(e){
+    var da = data.mtData();
+    this.setData({
+      endDate : e.detail.value,
+      sorts:da
+    })
+    
+  },
+  bindStartDateChange: function (e) {
+    var da = data.mtData();
+    this.setData({
+      startDate: e.detail.value,
+      sorts: da
+    })
+  },
+  bindPickerChange:function(e){
+    //console.log(e)
+    var startDate = this.data.startDate;
+    var endDate = this.data.endDate;
+    var da = data.mtData();
+    this.setData({
+      sorts:da
+    })
   }
 })

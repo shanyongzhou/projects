@@ -2,7 +2,7 @@ Page({
   data: {
     array: ['中国', '美国', '巴西', '日本'],
     index: 0,
-    date: '2016-09-01',
+    date: '2016-9-1',
     time: '12:01'
   },
   bindPickerChange: function(e) {
