@@ -1,1 +1,1 @@
-/* search.wxss */
+@import "../wxSearch/wxSearch.wxss";
