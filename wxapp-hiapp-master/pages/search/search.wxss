@@ -1,1 +1,46 @@
-@import "../wxSearch/wxSearch.wxss";
+@import "../../searchModul/searchModul.wxss";
+/**search.wxss**/
+
+
+.search{
+  width: 100%;
+  position: absolute;
+  height: 2.082rem;
+  background-color: #F2F2F2;
+}
+
+.search_logo{
+  width: 7%;
+  height: 1rem;
+  position:fixed;
+  margin-left: 10rpx;
+  margin-bottom:10rpx;
+  left: 5%;
+  right: 5%;
+  top: 0.5rem;
+  
+}
+
+.search_input{
+  position: absolute;
+  top: 0.3em;
+  left: 5%;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid #E1E1E1;
+  
+  padding-left: 8%;
+  font-size: 12px;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+

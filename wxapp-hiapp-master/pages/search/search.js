@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-var WxSearch = require('../../wxSearch/wxSearch.js')
+var WxSearch = require('../../searchModul/searchModul.js')
 var app = getApp()
 Page({
   data: {
@@ -16,6 +16,10 @@ Page({
     //初始化的时候渲染wxSearchdata
     WxSearch.init(that, 43, ['weappdev', '小程序', 'wxParse', 'wxSearch', 'wxNotification']);
     WxSearch.initMindKeys(['weappdev.com', '微信小程序开发', '微信开发', '微信小程序']);
+  },
+  search:function(e){
+    console.log(e)
+    WxSearch.wxSearchHiddenPancel(this)
   },
   wxSearchFn: function (e) {
     var that = this
