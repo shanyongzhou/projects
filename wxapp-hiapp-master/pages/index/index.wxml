@@ -1,33 +1,18 @@
-<scroll-view scroll-y="true" class="timeline">
-  <loading hidden="{{!loading}}">loading...</loading>
-  <view class="tweet-container" wx:for="{{timeline}}">
-    <view class="top-container flex-row">
-      <image class="card-avatar" src="{{item.avatar}}"></image>                
-      <view class="user-container">
-        <text class="card-name">{{item.nickname}}</text>
-        <text class="card-time">#{{item.id}} {{item.time}}</text>
+<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">
+  <scroll-view bindscroll="handlerScroll" scroll-y style="height: 100%;">
+    <view class="search">
+      <view catchtap="handlerAvatarTap" class="avatar">
+        <image src="../../assets/emotion.png"></image>
       </view>
     </view>
-    <view class="middle-container flex-column">
-      <text class="message-text">{{item.text}}</text>
-      <image class="message-image"
-        data-original-pic="{{item.original_pic}}" 
-        wx:if="{{item.original_pic}}" 
-        src="{{item.original_pic}}" 
-        mode="aspectFill"
-        catchtap="previewImage"
-      ></image>
-    </view>
-    <view class="bottom-container flex-row">
-      <view class="bottom-tool flex-row flex-rest-width">
-        <text class="bottom-tool-text">Forward</text>
-      </view>
-      <view class="bottom-tool flex-row flex-rest-width">
-        <text class="bottom-tool-text">Comment</text>
-      </view>
-      <view class="bottom-tool flex-row flex-rest-width">
-        <text class="bottom-tool-text">Forward</text>
-      </view>
-    </view>
-  </view>
-</scroll-view>
+   
+  </scroll-view>
+</view>
+<view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
+   <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
+     <view class="user-face-wrapper">
+       <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
+     </view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+   </view>
+</view>
