@@ -12,7 +12,8 @@
    <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
      <view class="user-face-wrapper">
        <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
+        
      </view>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+   
    </view>
 </view>

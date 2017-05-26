@@ -59,7 +59,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background: cadetblue;
+  background: #ffffff;
 }
 .user .user-box .user-face-wrapper {
   display: flex;

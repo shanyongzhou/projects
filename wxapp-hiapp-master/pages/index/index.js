@@ -1,5 +1,5 @@
 //wx-drawer
-const MENU_WIDTH_SCALE = 0.82;
+const MENU_WIDTH_SCALE = 0.3;
 const FAST_SPEED_SECOND = 300;
 const FAST_SPEED_DISTANCE = 5;
 const FAST_SPEED_EFF_Y = 50;
