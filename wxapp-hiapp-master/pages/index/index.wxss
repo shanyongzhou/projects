@@ -34,18 +34,7 @@
 	height: 50rpx;
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  padding: 60rpx;
-  border-bottom: 20rpx solid #dbdbdb;
-}
-.item image {
-  height: 150rpx;
-  width: 150rpx;
-}
+
 .user {
   position: fixed;
   top: 0;
@@ -88,4 +77,32 @@
   border-radius: 128rpx;
   width: 128rpx;
   height: 128rpx;
+}
+
+.mapView{
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  /*padding: 15rpx 40rpx;*/
+  height: 44px;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+.item .poster {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+
+.sub-title {
+  display: flex;
+  margin: 0px;
+  height: 20px;
+  font-size: 16px;
+  vertical-align:bottom;
+  padding-top: 15px;
 }

@@ -4,7 +4,34 @@
       <view catchtap="handlerAvatarTap" class="avatar">
         <image src="../../assets/emotion.png"></image>
       </view>
+      <view class="button-wrapper">
+        <button type="primary" 
+           bindtap="startTask" disabled="{{startDisabled}}"> 开始行程
+        </button>
     </view>
+     <view class="button-wrapper">
+         <button type="primary" 
+           bindtap="stopTask" disabled="{{stopDisabled}}"> 结束行程
+        </button>
+    </view>
+    </view>
+
+    <view class="mainView">
+   <map
+        class="mapView"
+        style="width: 100%; height: {{mapHeight}}px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        >
+    </map>
+
+</view>
+
+
+    
+    
    
   </scroll-view>
 </view>
@@ -14,6 +41,21 @@
        <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
         
      </view>
+<view class="item">
+  <image class="poster" src="../../assets/history.png"></image>
+  <text class="sub-title">我的行程</text>
+</view>
+
+<view class="item">
+  <image class="poster" src="../../assets/historys.png"></image>
+  <text class="sub-title">行程查看</text>
+</view>
+
+
+
+
+ 
+
    
    </view>
 </view>
