@@ -1,6 +1,4 @@
-// history.js
-let app = getApp()
-let data = require('historyData.js')
+// alltrip.js
 Page({
 
   /**
@@ -14,27 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var newData = data.mtData();
-    var finaData = [];
-    for(var i=0;i<newData.length;i++){
-      var image ='';
-      if (newData[i].Fraction<=60){
-        image = '../../../assets/dissatisfied.png';
-      } else if (newData[i].Fraction <= 80){
-        image = '../../../assets/commonly.png';
-      }else{
-        image = '../../../assets/satisfied.png';
-      }
-      finaData.push({
-        image: image,
-        title: newData[i].date,
-        subTitle: newData[i].Fraction,
-        Fraction: newData[i].consuming
-      })
-    }
-    this.setData({
-      items:finaData
-    })
+  
   },
 
   /**

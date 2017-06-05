@@ -5,18 +5,18 @@ Page({
     userInfo: {},
     navs: [
       {
-        image: '../../assets/home_entity.png',
+        image: '../../assets/myexam.png',
         text: '历史成绩',
         datasource: "history/history" 
       },
 
       {
-        image: '../../assets/home_play.png',
+        image: '../../assets/exam2.png',
         text: '去考试',
         datasource: "todo/todo" 
       },
       {
-        image: '../../assets/home_door.png',
+        image: '../../assets/sort.png',
         text: '排名',
         datasource: "sort/sort" 
       }

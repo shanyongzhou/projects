@@ -1,6 +1,5 @@
-// history.js
-let app = getApp()
-let data = require('historyData.js')
+// patrol.js
+let data = require('patrolData.js')
 Page({
 
   /**
@@ -14,26 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var newData = data.mtData();
-    var finaData = [];
-    for(var i=0;i<newData.length;i++){
-      var image ='';
-      if (newData[i].Fraction<=60){
-        image = '../../../assets/dissatisfied.png';
-      } else if (newData[i].Fraction <= 80){
-        image = '../../../assets/commonly.png';
-      }else{
-        image = '../../../assets/satisfied.png';
-      }
-      finaData.push({
-        image: image,
-        title: newData[i].date,
-        subTitle: newData[i].Fraction,
-        Fraction: newData[i].consuming
-      })
-    }
+    var date = new Date();
+    var startDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    date.setDate(date.getDate() + 7);
+    var endDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    
     this.setData({
-      items:finaData
+      startDate: startDate,
+      endDate: endDate,
+      detail: data.mtData()
     })
   },
 
@@ -84,5 +72,29 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  onItemClick:function(){
+
+  },
+  bindEndDateChange: function (e) {
+    var da = data.mtData();
+    this.setData({
+      endDate: e.detail.value,
+      sorts: da
+    })
+
+  },
+  bindStartDateChange: function (e) {
+    var da = data.mtData();
+    this.setData({
+      startDate: e.detail.value,
+      sorts: da
+    })
+  },
+  navToPage(event) {
+    let route = event.currentTarget.dataset.route;
+    wx.navigateTo({
+      url: route
+    })
   }
 })

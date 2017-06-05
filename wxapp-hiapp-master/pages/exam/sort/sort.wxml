@@ -26,7 +26,7 @@
  <view class="page__bd">
   <view class="order-list">
 
-    <!--购物车商品列表-->
+  
     <view wx:for="{{sorts}}">
       <view class="orderList" data-item-index="{{index}}" bindtap="onItemClick">
         <view class="first-line">

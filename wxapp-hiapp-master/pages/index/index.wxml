@@ -1,25 +1,26 @@
-<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">
+<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtap="handlerPageTap">
   <scroll-view bindscroll="handlerScroll" scroll-y style="height: 100%;">
     <view class="search">
       <view catchtap="handlerAvatarTap" class="avatar">
-        <image src="../../assets/emotion.png"></image>
+        <image src="../../assets/list.png"></image>
+        
       </view>
       <view class="button-wrapper">
-        <button type="primary" 
+        <text class="startbutton"
            bindtap="startTask" disabled="{{startDisabled}}"> 开始行程
-        </button>
+        </text>
     </view>
      <view class="button-wrapper">
-         <button type="primary" 
+         <text class="endbutton"
            bindtap="stopTask" disabled="{{stopDisabled}}"> 结束行程
-        </button>
+        </text>
     </view>
     </view>
 
-    <view class="mainView">
+    <view class="mainView" style="height:100%">
    <map
         class="mapView"
-        style="width: 100%; height: {{mapHeight}}px;"
+        style="width: 100%; height: 100%;"
         latitude="{{latitude}}"
         longitude="{{longitude}}"
         markers="{{markers}}"
@@ -35,22 +36,31 @@
    
   </scroll-view>
 </view>
-<view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
+<view class="user" style="width: {{ui.menuWidth}}px">
    <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
      <view class="user-face-wrapper">
        <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
         
      </view>
-<view class="item">
-  <image class="poster" src="../../assets/history.png"></image>
+<view class="item" data-type="我的行程" data-route="mytrip/mytrip" bindtouchend="navToPage">
+  <image class="poster" src="../../assets/mytrip.png"></image>
   <text class="sub-title">我的行程</text>
 </view>
 
-<view class="item">
-  <image class="poster" src="../../assets/historys.png"></image>
+<view class="item" data-type="行程查看" data-route="alltrip/alltrip" bindtouchend="navToPage">
+  <image class="poster" src="../../assets/mytrips.png"></image>
   <text class="sub-title">行程查看</text>
 </view>
 
+<view class="item" data-type="巡检计划" data-route="patrol/patrol" bindtouchend="navToPage">
+  <image class="poster" src="../../assets/patrol.png"></image>
+  <text class="sub-title">巡视计划</text>
+</view>
+
+<view class="item" data-type="检修计划" data-route="overhaul/overhaul" bindtouchend="navToPage">
+  <image class="poster" src="../../assets/overhaul.png"></image>
+  <text class="sub-title">检修计划</text>
+</view>
 
 
 

@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="page__bd">
+    
+    <view class="section">
+      <picker mode="date" value="{{startDate}}" bindchange="bindStartDateChange">
+        <view class="picker">
+          开始日期: {{startDate}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <picker mode="date" value="{{endDate}}" bindchange="bindEndDateChange">
+        <view class="picker">
+          结束日期: {{endDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+ <view class="page__bd">
+  <view class="order-list">
+
+  
+    <view wx:for="{{detail}}">
+      <view class="orderList" data-route="patrolDetail/patrolDetail?id={{item.ID}}" bindtouchend="navToPage">
+        <view class="first-line">
+          <text>{{item.WORK_DATE}}</text>
+          <text class="name">详情 >></text>
+        </view>
+        <view>
+          <text class="text-left">负责人</text>
+          <text>{{item.CHARGE_P}}</text>
+        </view>
+        <view>
+         <text class="text-left">工作人员</text>
+          <text>{{item.WORK_P}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+</view>

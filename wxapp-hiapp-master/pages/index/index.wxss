@@ -23,8 +23,11 @@
 .search {
   background: white;
   display: flex;
-  align-items: center;
-  margin-bottom: 20rpx;
+  width: 100%;
+  margin: 0;
+  
+  position: absolute;
+  z-index: 999999;
 }
 .search .avatar {
   padding: 30rpx;
@@ -79,9 +82,7 @@
   height: 128rpx;
 }
 
-.mapView{
-  align-items: center;
-}
+
 
 .item {
   display: flex;
@@ -96,13 +97,56 @@
   height: 20px;
   padding-right: 10px;
   padding-top: 15px;
+  padding-left: 15px;
 }
 
 .sub-title {
   display: flex;
   margin: 0px;
   height: 20px;
-  font-size: 16px;
+  font-size: 14px;
   vertical-align:bottom;
   padding-top: 15px;
+}
+.button-wrapper{
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.startbutton{
+  display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background: #595959;
+  color: #ffffff;
+  padding-top: 10px;
+}
+.endbutton{
+  display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background: #FFD39B;
+  color:#595959;
+  padding-top: 10px;
 }

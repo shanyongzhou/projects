@@ -4,19 +4,24 @@
     "pages/contacts/contacts",
     "pages/settings/settings",
     "pages/about/about",
-    "pages/feedback/feedback",
     "pages/profile/profile",
     "pages/message/message",
     "pages/exam/exam",
     "pages/exam/history/history",
     "pages/exam/todo/todo",
     "pages/exam/sort/sort",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/index/mytrip/mytrip",
+    "pages/index/patrol/patrol",
+    "pages/index/overhaul/overhaul",
+    "pages/index/alltrip/alltrip",
+    "pages/index/patrol/patrolDetail/patrolDetail",
+    "pages/index/overhaul/overhaulDetail/overhaulDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff9630",
-    "navigationBarTitleText": "HiApp",
+    "navigationBarTitleText": "巡检小助手",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -28,32 +33,33 @@
       {
         "pagePath": "pages/index/index",
         "text": "巡视",
-        "iconPath": "assets/home-outline.png",
-        "selectedIconPath": "assets/home-selected.png"
+        "iconPath": "assets/check.png",
+        "selectedIconPath": "assets/check-selected.png"
+        
       },
       {
         "pagePath": "pages/contacts/contacts",
         "text": "信息交流",
-        "iconPath": "assets/contacts-outline.png",
-        "selectedIconPath": "assets/contacts-selected.png"
+        "iconPath": "assets/talk.png",
+        "selectedIconPath": "assets/talk-selected.png"
       },
       {
         "pagePath": "pages/settings/settings",
         "text": "缺陷管理",
-        "iconPath": "assets/settings-outline.png",
-        "selectedIconPath": "assets/settings-selected.png"
+        "iconPath": "assets/problem.png",
+        "selectedIconPath": "assets/problem-selected.png"
       },
       {
         "pagePath": "pages/exam/exam",
         "text": "考试",
-        "iconPath": "assets/settings-outline.png",
-        "selectedIconPath": "assets/settings-selected.png"
+        "iconPath": "assets/exam1.png",
+        "selectedIconPath": "assets/exam1-selected.png"
       },
       {
         "pagePath": "pages/search/search",
         "text": "通用查询",
-        "iconPath": "assets/settings-outline.png",
-        "selectedIconPath": "assets/settings-selected.png"
+        "iconPath": "assets/search.png",
+        "selectedIconPath": "assets/search-selected.png"
       }
     ]
   }

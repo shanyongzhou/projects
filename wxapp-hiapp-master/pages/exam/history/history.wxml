@@ -1,6 +1,6 @@
 <view class="bgView">
   <block wx:for="{{items}}" wx:key="*this">
-   <navigator  class="cell" style="background-color:{{item.color}}"> 
+   <navigator  class="cell" style="background-color:#FFFFFF"> 
 
     <image class="aspectFill" src="{{item.image}}"></image>
 

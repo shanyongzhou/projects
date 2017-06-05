@@ -1,12 +1,12 @@
-// history.js
-let app = getApp()
-let data = require('historyData.js')
+// patrolDetail.js
+let data = require('patrolDetailData.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    
   
   },
 
@@ -14,27 +14,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var newData = data.mtData();
-    var finaData = [];
-    for(var i=0;i<newData.length;i++){
-      var image ='';
-      if (newData[i].Fraction<=60){
-        image = '../../../assets/dissatisfied.png';
-      } else if (newData[i].Fraction <= 80){
-        image = '../../../assets/commonly.png';
-      }else{
-        image = '../../../assets/satisfied.png';
-      }
-      finaData.push({
-        image: image,
-        title: newData[i].date,
-        subTitle: newData[i].Fraction,
-        Fraction: newData[i].consuming
-      })
-    }
-    this.setData({
-      items:finaData
+    var id = options.id;
+    var da = data.mtData();
+    this.setData({ 
+      date:da.WORK_DATE,
+      subStations:da.SUBSTATIONS,
+      workP:da.WORK_P,
+      chargeP:da.CHARGE_P,
+      workContent:da.WORK_CONTENT,
+      mark:da.MARK,
+      cars:da.CARS
     })
+
+
   },
 
   /**
