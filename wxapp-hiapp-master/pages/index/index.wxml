@@ -17,7 +17,7 @@
     </view>
     </view>
 
-    <view class="mainView" style="height:100%">
+    <view class="mainView" style="height:90%">
    <map
         class="mapView"
         style="width: 100%; height: 100%;"

@@ -25,9 +25,7 @@
   display: flex;
   width: 100%;
   margin: 0;
-  
-
-
+  height: 10%;
 }
 .search .avatar {
   padding: 30rpx;
@@ -119,7 +117,7 @@
 	text-align: center;
 	text-decoration: none;
 	font: 14px/100% Arial, Helvetica, sans-serif;
-	padding: .5em 2em .55em;
+	padding: .8em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	-webkit-border-radius: .5em; 
 	-moz-border-radius: .5em;
@@ -129,7 +127,7 @@
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
   background: #595959;
   color: #ffffff;
-  padding-top: 10px;
+ 
 }
 .endbutton{
   display: inline-block;
@@ -138,7 +136,7 @@
 	text-align: center;
 	text-decoration: none;
 	font: 14px/100% Arial, Helvetica, sans-serif;
-	padding: .5em 2em .55em;
+	padding: .8em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	-webkit-border-radius: .5em; 
 	-moz-border-radius: .5em;
@@ -148,5 +146,5 @@
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
   background: #FFD39B;
   color:#595959;
-  padding-top: 10px;
+  
 }

@@ -1,2 +1,38 @@
-<!--mytrip.wxml-->
-<text>mytrip.wxml</text>
+<view class="page">
+ <view class="page__bd">
+  <view class="order-list">
+
+  
+    <view wx:for="{{mytrips}}" wx:key="item.id">
+      <view class="orderList" data-item-index="{{index}}" bindtap="onItemClick">
+        <view class="first-line">
+          <image class ="trip" src="../../../assets/trip.png"></image>
+           <text class="name">详情 ></text>
+          
+        </view>
+        
+        <view>
+         <text class="left">开始</text>
+          <text>{{item.start}}</text>
+        </view>
+        <view>
+         <text class="left">结束</text>
+          <text>{{item.end}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+</view>
