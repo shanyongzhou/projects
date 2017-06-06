@@ -59,6 +59,9 @@ Page({
     if (ui.offsetLeft == 0) {
       ui.offsetLeft = ui.menuWidth;
       this.setData({ ui: ui })
+    }else{
+      ui.offsetLeft =0;
+      this.setData({ ui: ui })
     }
   },
   navToPage(event) {

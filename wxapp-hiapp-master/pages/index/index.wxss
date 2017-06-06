@@ -26,8 +26,8 @@
   width: 100%;
   margin: 0;
   
-  position: absolute;
-  z-index: 999999;
+
+
 }
 .search .avatar {
   padding: 30rpx;
